@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Archives: 2019 | Hexo</title>
+  <title>（hexo+github page） 静态网站部署流程 | Hexo</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -59,7 +59,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -161,87 +161,161 @@
         <!-- ============================ Header & Logo bar =========================== -->
 
 </div>
-      <!-- ============================ Hero Image =========================== -->
-
-<section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img.jpg) no-repeat center center fixed;background-size: cover">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                    <div>
-                        
-                        <h2>YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.</h2>
-                        <p></p>
-                        
-                        <h2></h2>
-                        <p>每一个不曾起舞的日子都是对生命的辜负。</p>
-                        
-
-                    </div>
-                </div>
-            </div>
-            <!-- // .col-md-12 -->
-        </div>
-        <div class="herofade beige-dk"></div>
-    </div>
-</section>
-
-<!-- Height spacing helper -->
-<div class="heightblock"></div>
-<!-- // End height spacing helper -->
-
-<!-- ============================ END Hero Image =========================== -->
-
-
-
-
-<section id="services">
+      
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2019/02/08/（hexo+github page） 静态网站部署流程/">（hexo+github page） 静态网站部署流程</a></h4>
-                            
-                            <p><time datetime="2019-02-07T16:01:53.325Z"><a href="/2019/02/08/（hexo+github page） 静态网站部署流程/">2019-02-08</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2019/02/07/安装pip/">在ubuntu 14.04.2上安装pip</a></h4>
-                            
-                            <p><time datetime="2019-02-07T15:57:45.849Z"><a href="/2019/02/07/安装pip/">2019-02-07</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2019/02/01/hello-world/">Hello World</a></h4>
-                            
-                            <p><time datetime="2019-02-01T13:29:03.654Z"><a href="/2019/02/01/hello-world/">2019-02-01</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2019-02-07T16:01:53.325Z" itemprop="datePublished">
+          2019-02-08
+      </time>
+    
+</span>
+                <h1>（hexo+github page） 静态网站部署流程</h1>
+            </div>
         </div>
-    </div>
-</section> 
+        <div class="col-md-8 col-md-offset-2">
+      		<p>部署简单方便快捷，关键还是免费的，不受第三方影响，文章需使用markdown编辑，可以一直作为个人技术博客更新下去。</p>
+<p>我的博客是ubuntu14.04.2环境下部署的，md文件在win10系统下编辑。</p>
+<h3 id="准备材料："><a href="#准备材料：" class="headerlink" title="准备材料："></a>准备材料：</h3><p>markdown编辑器：typora</p>
+<p>免费远端服务器：github账号</p>
+<p>全栈框架：node.js</p>
+<p>node.js版本控制器：npm</p>
+<p>网站搭建框架：hexo</p>
+<p>网站主题：TKL</p>
+<h3 id="搭建流程"><a href="#搭建流程" class="headerlink" title="搭建流程"></a>搭建流程</h3><hr>
+<p>1.下载typora</p>
+<h2 id="typora-win版"><a href="#typora-win版" class="headerlink" title="typora win版"></a><a href="https://www.typora.io/#windows" target="_blank" rel="noopener">typora win版</a></h2><p>2.注册github账号</p>
+<h2 id="github注册"><a href="#github注册" class="headerlink" title="github注册"></a><a href="https://github.com/join?source=header-home" target="_blank" rel="noopener">github注册</a></h2><p>3.新建博客项目</p>
+<p>注册完成后，登入账号，点击新建项目</p>
+<p><img src="/img/1549303171868.png" alt="创建新项目" title="&#39;新建项目&#39;"></p>
+<p><img src="/img/1549507405766.png" alt="自定义网址" title="新建博客网址"></p>
+<p><strong>注意：项目名称需要遵守命名规则，账号名.github.io，勾选公开项目。</strong></p>
+<p>点击create repository创建成功</p>
+<hr>
+<p>4.生成ssh密匙，在git上部署密匙</p>
+<p>先确认是否生成过密匙：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ less ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure></p>
+<p>没有的话就新建一个：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C 注册邮箱</span><br></pre></td></tr></table></figure></p>
+<p>查看是否生成成功：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ less ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure></p>
+<p>使用vim打开id_rsa.pub复制密匙内容：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vim ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure></p>
+<p>打开github的setting：</p>
+<p><img src="/img/1549539179166.png" alt="setting"></p>
+<p>打开SSH and GPG keys：</p>
+<p><img src="/img/1549539287304.png" alt="导航"></p>
+<p>点击New SSH key：</p>
+<p><img src="/img/1549539419944.png" alt="New SSH key"></p>
+<p>添加密匙，title随便填名称，将刚刚复制好的密匙内容放入key中，点击Add SSH key，就添加成功了。</p>
+<p><img src="/img/1549539754797.png" alt="Add SSH key"></p>
+<hr>
+<p>5.安装git和全局配置<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install git</span><br></pre></td></tr></table></figure></p>
+<p>配置全局git用户信息<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config –g user.email “注册git的邮箱”</span><br><span class="line">$ git config –g user.name “git用户名”</span><br></pre></td></tr></table></figure></p>
+<hr>
+<p>6.在ubuntu系统下安装node.js和npm</p>
+<p><a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener">node.js下载地址</a>   </p>
+<p><strong>注意：下载LTS版</strong></p>
+<p>下载后是一个压缩包，不过不是gzip格式，解压命令是<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ tar -xvf node-v10.15.1-linux-x64.tar.xz /opt</span><br></pre></td></tr></table></figure></p>
+<p>新建node和npm的软连接<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo ln -s node-v10.15.1-linux-x64/bin/node /usr/<span class="built_in">local</span>/bin/node</span><br><span class="line">$ sudo ln -s node-v10.15.1-linux-x64/bin/npm /usr/<span class="built_in">local</span>/bin/npm</span><br></pre></td></tr></table></figure></p>
+<p>在终端查看是否可正常运行<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ node -v</span><br><span class="line">$ npm -v</span><br></pre></td></tr></table></figure></p>
+<hr>
+<p>7.使用npm安装hexo</p>
+<p>在终端中执行下列代码：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-cli -g</span><br></pre></td></tr></table></figure></p>
+<p>通常会报access权限问题</p>
+<p>解决方案为：给npm的global安装位置换个地方</p>
+<p>原因是：因为默认的安装位置是/usr/local/lib所在的文件夹，这是系统的文件夹所在地，所以可能会出现一些读写问题。</p>
+<p>流程为：</p>
+<p>第一步：在你的用户文件下新建一个文件夹，这个.npm-global 名字可以用你自己喜欢的名字替换，推荐直接使用这个名字。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir ~/.npm-global</span><br></pre></td></tr></table></figure></p>
+<p>第二步：更改node的安装连接<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm config <span class="built_in">set</span> prefix <span class="string">'~/.npm-global</span></span><br></pre></td></tr></table></figure></p>
+<p>第三步：在用户的profile下增加path，为的是系统能够找到可执行文件的目录<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">export</span> PATH=~/.npm-global/bin:<span class="variable">$PATH</span></span><br></pre></td></tr></table></figure></p>
+<p>第四步：update profile。使其生效<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">source</span> ~/.profile</span><br></pre></td></tr></table></figure></p>
+<hr>
+<p>8.在桌面新建文件夹，文件夹名自定义，作为博客的根目录，存放所有博客内容<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir blog</span><br></pre></td></tr></table></figure></p>
+<hr>
+<p>9.使用hexo进行部署</p>
+<p>进入新建文件夹内，执行hexo初始化<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init</span><br></pre></td></tr></table></figure></p>
+<p>将本地博客内容推送到git中，需要安装hexo-deployer-git：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></p>
+<p>配置你hexo博客根目录下的_config.yml文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vim _config.yml</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">type: git</span><br><span class="line">repo: git@github.com:自己的账号名/自己的账号名.github.io.git</span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure>
+<p>生成博客页面：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g</span><br></pre></td></tr></table></figure></p>
+<p>推送页面内容至git：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d</span><br></pre></td></tr></table></figure></p>
+<p><strong>注意：通常要求输入git用户名和登录密码</strong></p>
+<hr>
+<h2 id="10-在浏览器中输入：https-自己的账号名-github-io，查看是否有内容，有的话就是部署成功了。"><a href="#10-在浏览器中输入：https-自己的账号名-github-io，查看是否有内容，有的话就是部署成功了。" class="headerlink" title="10.在浏览器中输入：https://自己的账号名.github.io，查看是否有内容，有的话就是部署成功了。"></a>10.在浏览器中输入：<code>https://自己的账号名.github.io</code>，查看是否有内容，有的话就是部署成功了。</h2><p>11.自定义主题：</p>
+<p>默认开始主题是<code>landsacpe</code></p>
+<p>在主题网找到自己想要的主题：</p>
+<p><a href="https://hexo.io/themes/" target="_blank" rel="noopener">hexo主题展示网站</a></p>
+<p>选好后进入博客根目录，执行下载主题代码：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/主题作者名/主题项目名 themes/主题名</span><br></pre></td></tr></table></figure></p>
+<p> 打开配置文件_config.yml，修改主题：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ vim _config.yml </span><br><span class="line">$ theme:主题名</span><br></pre></td></tr></table></figure></p>
+<p>刷新部署内容：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean </span><br><span class="line">$ hexo g</span><br><span class="line">$ hexo d</span><br></pre></td></tr></table></figure></p>
+<p>重新打开浏览器输入自己网址，查看是否部署成功。</p>
+<p><strong>注意：展示图片需要在source中新建一个img文件夹，存放展示图片，md文件中的图片路径需要修改成/img/图片名</strong></p>
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>虽然还没想好写点什么，但是总觉得这里放句话比较和谐。</p>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    
+    <a class="pull-right" href="/2019/02/07/安装pip/">
+        在ubuntu 14.04.2上安装pip →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
     </div>
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 
