@@ -167,7 +167,7 @@
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-      <time datetime="2019-02-07T12:30:19.206Z" itemprop="datePublished">
+      <time datetime="2019-02-07T15:53:52.941Z" itemprop="datePublished">
           2019-02-07
       </time>
     
@@ -195,14 +195,10 @@
 <p><strong>注意：项目名称需要遵守命名规则，账号名.github.io，勾选公开项目。</strong></p>
 <p>点击create repository创建成功</p>
 <p>4.生成ssh密匙，在git上部署密匙</p>
-<p>先确认是否生成过密匙：</p>
-<p><code>less ~/.ssh/id_rsa.pub</code></p>
-<p>没有的话就新建一个：</p>
-<p><code>ssh-keygen -t rsa -C 注册邮箱</code></p>
-<p>查看是否生成成功：</p>
-<p><code>less ~/.ssh/id_rsa.pub</code></p>
-<p>使用vim打开id_rsa.pub复制密匙内容：</p>
-<p><code>vim ~/.ssh/id_rsa.pub</code></p>
+<p>先确认是否生成过密匙：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ less ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure></p>
+<p>没有的话就新建一个：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C 注册邮箱</span><br></pre></td></tr></table></figure></p>
+<p>查看是否生成成功：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ less ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure></p>
+<p>使用vim打开id_rsa.pub复制密匙内容：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vim ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure></p>
 <p>打开github的setting：</p>
 <p><img src="/img/1549539179166.png" alt="setting"></p>
 <p>打开SSH and GPG keys：</p>
@@ -211,58 +207,41 @@
 <p><img src="/img/1549539419944.png" alt="New SSH key"></p>
 <p>添加密匙，title随便填名称，将刚刚复制好的密匙内容放入key中，点击Add SSH key，就添加成功了。</p>
 <p><img src="/img/1549539754797.png" alt="Add SSH key"></p>
-<p>5.安装git和全局配置</p>
-<p><code>sudo apt-get install git</code></p>
-<p>配置全局git用户信息</p>
-<p><code>git config –g user.email “注册git的邮箱”</code><br><code>git config –g user.name “git用户名”</code></p>
+<p>5.安装git和全局配置<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install git</span><br></pre></td></tr></table></figure></p>
+<p>配置全局git用户信息<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config –g user.email “注册git的邮箱”</span><br><span class="line">$ git config –g user.name “git用户名”</span><br></pre></td></tr></table></figure></p>
 <p>6.在ubuntu系统下安装node.js和npm</p>
 <p><a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener">node.js下载地址</a>   </p>
 <p><strong>注意：下载LTS版</strong></p>
-<p>下载后是一个压缩包，不过不是gzip格式，解压命令是</p>
-<p><code>tar -xvf node-v10.15.1-linux-x64.tar.xz /opt</code></p>
-<p>新建node和npm的软连接</p>
-<p><code>sudo ln -s node-v10.15.1-linux-x64/bin/node /usr/local/bin/node</code></p>
-<p><code>sudo ln -s node-v10.15.1-linux-x64/bin/npm /usr/local/bin/npm</code></p>
-<p>在终端查看是否可正常运行</p>
-<p><code>node -v</code></p>
-<p><code>npm -v</code></p>
+<p>下载后是一个压缩包，不过不是gzip格式，解压命令是<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ tar -xvf node-v10.15.1-linux-x64.tar.xz /opt</span><br></pre></td></tr></table></figure></p>
+<p>新建node和npm的软连接<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo ln -s node-v10.15.1-linux-x64/bin/node /usr/<span class="built_in">local</span>/bin/node</span><br><span class="line">$ sudo ln -s node-v10.15.1-linux-x64/bin/npm /usr/<span class="built_in">local</span>/bin/npm</span><br></pre></td></tr></table></figure></p>
+<p>在终端查看是否可正常运行<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ node -v</span><br><span class="line">$ npm -v</span><br></pre></td></tr></table></figure></p>
 <p>7.使用npm安装hexo</p>
-<p>在终端中执行下列代码：</p>
-<p><code>npm install hexo-cli -g</code></p>
+<p>在终端中执行下列代码：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-cli -g</span><br></pre></td></tr></table></figure></p>
 <p>通常会报access权限问题</p>
 <p>解决方案为：给npm的global安装位置换个地方</p>
 <p>原因是：因为默认的安装位置是/usr/local/lib所在的文件夹，这是系统的文件夹所在地，所以可能会出现一些读写问题。</p>
 <p>流程为：</p>
-<p>第一步：在你的用户文件下新建一个文件夹，这个.npm-global 名字可以用你自己喜欢的名字替换，推荐直接使用这个名字。<br><code>mkdir ~/.npm-global</code></p>
-<p>第二步：更改node的安装连接<br><code>npm config set prefix &#39;~/.npm-global&#39;</code></p>
-<p>第三步：在用户的profile下增加path，为的是系统能够找到可执行文件的目录<br><code>export PATH=~/.npm-global/bin:$PATH</code></p>
-<p>第四步：update profile。使其生效<br><code>source ~/.profile</code></p>
-<p>8.在桌面新建文件夹，文件夹名自定义，作为博客的根目录，存放所有博客内容</p>
-<p><code>mkdir blog</code></p>
+<p>第一步：在你的用户文件下新建一个文件夹，这个.npm-global 名字可以用你自己喜欢的名字替换，推荐直接使用这个名字。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir ~/.npm-global</span><br></pre></td></tr></table></figure></p>
+<p>第二步：更改node的安装连接<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm config <span class="built_in">set</span> prefix <span class="string">'~/.npm-global</span></span><br></pre></td></tr></table></figure></p>
+<p>第三步：在用户的profile下增加path，为的是系统能够找到可执行文件的目录<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">export</span> PATH=~/.npm-global/bin:<span class="variable">$PATH</span></span><br></pre></td></tr></table></figure></p>
+<p>第四步：update profile。使其生效<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">source</span> ~/.profile</span><br></pre></td></tr></table></figure></p>
+<p>8.在桌面新建文件夹，文件夹名自定义，作为博客的根目录，存放所有博客内容<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir blog</span><br></pre></td></tr></table></figure></p>
 <p>9.使用hexo进行部署</p>
-<p>进入新建文件夹内，执行hexo初始化</p>
-<p><code>hexo init</code></p>
-<p>将本地博客内容推送到git中，需要安装hexo-deployer-git：</p>
-<p><code>npm install hexo-deployer-git --save</code></p>
-<p>配置你hexo博客根目录下的_config.yml文件</p>
-<p><code>vim _config.yml</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">type: git</span><br><span class="line">repo: git@github.com:自己的账号名/自己的账号名.github.io.git</span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure>
-<p>生成博客页面：</p>
-<p><code>hexo g</code></p>
-<p>推送页面内容至git：</p>
-<p><code>hexo d</code></p>
+<p>进入新建文件夹内，执行hexo初始化<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init</span><br></pre></td></tr></table></figure></p>
+<p>将本地博客内容推送到git中，需要安装hexo-deployer-git：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></p>
+<p>配置你hexo博客根目录下的_config.yml文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vim _config.yml</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">type: git</span><br><span class="line">repo: git@github.com:自己的账号名/自己的账号名.github.io.git</span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure>
+<p>生成博客页面：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g</span><br></pre></td></tr></table></figure></p>
+<p>推送页面内容至git：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d</span><br></pre></td></tr></table></figure></p>
 <p><strong>注意：通常要求输入git用户名和登录密码</strong></p>
 <p>10.在浏览器中输入：<code>https://自己的账号名.github.io</code>，查看是否有内容，有的话就是部署成功了。</p>
 <p>11.自定义主题：</p>
 <p>默认开始主题是<code>landsacpe</code></p>
 <p>在主题网找到自己想要的主题：</p>
 <p><a href="https://hexo.io/themes/" target="_blank" rel="noopener">hexo主题展示网站</a></p>
-<p>选好后进入博客根目录，执行下载主题代码：</p>
-<p><code>git clone https://github.com/主题作者名/主题项目名 themes/主题名</code><br> 打开配置文件_config.yml，修改主题：</p>
-<p><code>vim _config.yml</code></p>
-<p><code>theme:主题名</code></p>
-<p>刷新部署内容：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean </span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<p>选好后进入博客根目录，执行下载主题代码：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/主题作者名/主题项目名 themes/主题名</span><br></pre></td></tr></table></figure></p>
+<p> 打开配置文件_config.yml，修改主题：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ vim _config.yml </span><br><span class="line">$ theme:主题名</span><br></pre></td></tr></table></figure></p>
+<p>刷新部署内容：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean </span><br><span class="line">$ hexo g</span><br><span class="line">$ hexo d</span><br></pre></td></tr></table></figure></p>
 <p>重新打开浏览器输入自己网址，查看是否部署成功。</p>
 <p><strong>注意：展示图片需要在source中新建一个img文件夹，存放展示图片，md文件中的图片路径需要修改成/img/图片名</strong></p>
 
@@ -272,8 +251,8 @@
         <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
     
     
-    <a class="pull-right" href="/2019/02/01/hello-world/">
-        Hello World →
+    <a class="pull-right" href="/2019/02/07/安装pip/">
+         →
     </a>
     
 </nav>
