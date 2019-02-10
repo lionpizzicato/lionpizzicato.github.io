@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Archives: 2019/2 | Hexo</title>
+  <title>（IDE安装）ubuntu 14.04.2安装pychram | Hexo</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -59,7 +59,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -161,96 +161,105 @@
         <!-- ============================ Header & Logo bar =========================== -->
 
 </div>
-      <!-- ============================ Hero Image =========================== -->
-
-<section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img.jpg) no-repeat center center fixed;background-size: cover">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                    <div>
-                        
-                        <h2></h2>
-                        <p></p>
-                        
-                        <h2></h2>
-                        <p></p>
-                        
-
-                    </div>
-                </div>
-            </div>
-            <!-- // .col-md-12 -->
-        </div>
-        <div class="herofade beige-dk"></div>
-    </div>
-</section>
-
-<!-- Height spacing helper -->
-<div class="heightblock"></div>
-<!-- // End height spacing helper -->
-
-<!-- ============================ END Hero Image =========================== -->
-
-
-
-
-<section id="services">
+      
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2019/02/10/（IDE安装）ubuntu 14.04.2安装pychram/">（IDE安装）ubuntu 14.04.2安装pychram</a></h4>
-                            
-                            <p><time datetime="2019-02-10T05:01:26.512Z"><a href="/2019/02/10/（IDE安装）ubuntu 14.04.2安装pychram/">2019-02-10</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2019/02/10/（系统初始配置）ubuntu14.04.2虚拟环境搭建流程/">（系统初始配置）ubuntu14.04.2搭建py3.6虚拟环境流程</a></h4>
-                            
-                            <p><time datetime="2019-02-10T03:48:23.516Z"><a href="/2019/02/10/（系统初始配置）ubuntu14.04.2虚拟环境搭建流程/">2019-02-10</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2019/02/08/（hexo+github page） 静态网站部署流程/">（hexo+github page） 静态网站部署流程</a></h4>
-                            
-                            <p><time datetime="2019-02-07T16:01:53.325Z"><a href="/2019/02/08/（hexo+github page） 静态网站部署流程/">2019-02-08</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2019/02/07/安装pip/">在ubuntu 14.04.2上安装pip</a></h4>
-                            
-                            <p><time datetime="2019-02-07T15:57:45.849Z"><a href="/2019/02/07/安装pip/">2019-02-07</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2019-02-10T05:01:26.512Z" itemprop="datePublished">
+          2019-02-10
+      </time>
+    
+</span>
+                <h1>（IDE安装）ubuntu 14.04.2安装pychram</h1>
+            </div>
         </div>
-    </div>
-</section> 
+        <div class="col-md-8 col-md-offset-2">
+      		<p>pychram作为python 最专业的ide，每个pyer都应该安装一个</p>
+<hr>
+<h3 id="流程："><a href="#流程：" class="headerlink" title="流程："></a>流程：</h3><h4 id="第一步："><a href="#第一步：" class="headerlink" title="第一步："></a>第一步：</h4><p>下载官网安装包并安装</p>
+<p><a href="http://www.jetbrains.com/pycharm/download/" target="_blank" rel="noopener">pycharm安装包下载</a></p>
+<p>下载完成后在当前路径下解压：</p>
+<p><code>$ tar -zxvf pycharm-2018.3.4.tar.gz</code></p>
+<p>解压完后进入bin目录：</p>
+<p><code>$ cd pycharm-2018.3.4/bin/</code></p>
+<p>运行pycharm.sh进行安装</p>
+<p><code>$ ./pycharm.sh</code></p>
+<h4 id="第二步："><a href="#第二步：" class="headerlink" title="第二步："></a>第二步：</h4><p>破解pycharm</p>
+<p>先在hosts中的增加本地回流ip，相当于阻断pycharm的通信</p>
+<p><code>$ cd /etc/</code></p>
+<p><code>$ sudo chmod 777 hosts</code></p>
+<p><code>$ vim hosts</code></p>
+<p>在最后面增加0.0.0.0 account.jetbrains.com</p>
+<p>复制激活码，打开PyCharm选择Activation code激活，然后复制下面的激活码点击激活。</p>
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p></p>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    
+    <a class="pull-right" href="/2019/02/10/（系统初始配置）ubuntu14.04.2虚拟环境搭建流程/">
+        （系统初始配置）ubuntu14.04.2搭建py3.6虚拟环境流程 →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
     </div>
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 
